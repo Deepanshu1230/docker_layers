@@ -2,6 +2,11 @@ FROM node:20
 
 WORKDIR /app
 
+
+COPY package* .
+COPY ./prisma .
+
+
 COPY . .
 
 RUN npm install
